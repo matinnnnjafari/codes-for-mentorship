@@ -1,0 +1,127 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  padding: 10px 10px 10px 10px;
+  background-color: #FAF9F5;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.filter img {
+  width: 30px;
+  height: 30px;
+}
+
+.stock {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 2px solid #DFDFDF;
+  border-bottom: 2px solid #DFDFDF;
+  padding: 0 15px;
+}
+.stock .h2 {
+  padding: 0 15px;
+}
+.stock .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.stock .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.stock .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.stock .switch input:checked + .slider {
+  background-color: rgb(161, 5, 80);
+}
+.stock .switch input:focus + .slider {
+  box-shadow: 0 0 1px rgb(161, 5, 80);
+}
+.stock .switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.catagory {
+  padding: 0px 30px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catagory img {
+  height: 8px;
+}
+.catagory h2 {
+  color: rgb(161, 5, 80);
+}
+
+.dropdown {
+  display: flex;
+  justify-content: left;
+  padding: 0px 10px 10px 10px;
+  border-bottom: 2px solid #DFDFDF;
+}
+.dropdown li {
+  list-style-type: none;
+}
+.dropdown li .filter_op {
+  display: flex;
+  gap: 5px;
+}
+.dropdown li .filter_op label {
+  font-size: 20px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 0 0;
+}
+.buttons .clear_btn {
+  width: 47%;
+  display: flex;
+  justify-content: center;
+}
+.buttons .clear_btn a {
+  color: rgb(161, 5, 80);
+  text-decoration: none;
+}
+.buttons .apply_btn {
+  background-color: rgb(161, 5, 80);
+  width: 47%;
+  display: flex;
+  justify-content: center;
+}
+.buttons .apply_btn a {
+  color: rgba(255, 255, 255, 0.631372549);
+  text-decoration: none;
+}
+.buttons .apply_btn h3 {
+  font-weight: 100;
+}/*# sourceMappingURL=main3.css.map */

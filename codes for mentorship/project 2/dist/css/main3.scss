@@ -1,0 +1,137 @@
+$primary-color:rgb(161, 5, 80);
+$color-black: #0C0C0C;
+$color-white: #ffffffa1;
+$color-Background: #FAF9F5;
+$color-NeutralGray: #DFDFDF;
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    background-color: $color-Background;
+}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  font-weight: 800;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.stock {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top:  2px solid $color-NeutralGray;
+  border-bottom:  2px solid $color-NeutralGray;
+  padding: 0 15px;
+  .h2 {
+      padding: 0 15px;
+  }
+  .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        input:checked + .slider {
+          background-color: $primary-color;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px $primary-color;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+    }
+
+}
+.catagory {
+  padding: 0px 30px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    height: 8px;
+  }
+  h2 {
+    color: $primary-color;
+  }
+}
+.dropdown {
+  display: flex;
+  justify-content: left;
+  padding: 0px 10px 10px 10px;
+  border-bottom: 2px solid $color-NeutralGray;
+  li {
+    list-style-type: none;
+    .filter_op {
+      display: flex;
+      gap: 5px;
+      label {
+        font-size: 20px;
+        padding: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+} 
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 0 0;
+    .clear_btn {
+      width: 47%;
+      display: flex;
+      justify-content: center;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+      }
+    }
+    .apply_btn {
+      background-color: $primary-color;
+      width: 47%;
+      display: flex;
+      justify-content: center;
+      a {
+        color: $color-white;
+        text-decoration: none;
+      }
+      h3 {
+        font-weight: 100;
+      }
+    }
+  }
+
